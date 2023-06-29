@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<center>
+
+    <form method="POST" class="p-3 shadow" style="width: 600px;display: flex;justify-content: flex-start;flex-direction: column;text-align: left;margin-top: 30px;">
+        <h3 style="text-align: center;margin-bottom: 15px;">UPDATE TASK</h3>
+        {% csrf_token %}
+        {{f.as_p}}
+        <button type="submit" class="btn btn-success">confirm</button>
+    </form>
+</center>
+{% endblock %}
